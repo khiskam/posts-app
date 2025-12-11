@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:18.1-alpine
+    ports:
+      - ${POSTGRES_PORT}:5432
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - posts-data:/var/lib/postgresql/data
+volumes:
+  posts-data:

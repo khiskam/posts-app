@@ -1,0 +1,16 @@
+node_modules
+dist
+.git
+.gitignore
+.env*
+*.md
+coverage
+.vscode
+.idea
+*.log
+test
+tsconfig*.json
+eslint.config.mjs
+nest-cli.json
+
+
